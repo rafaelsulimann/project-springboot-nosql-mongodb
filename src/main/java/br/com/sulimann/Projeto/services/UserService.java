@@ -23,7 +23,7 @@ public class UserService {
 
     public UserModel findById(String id){
         Optional<UserModel> obj = repository.findById(id);
-        return obj.orElseThrow(() -> new NotFoundException("Objeto não encontrado"));
+        return obj.orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
     }
 
     public UserModel insert(UserModel obj){
